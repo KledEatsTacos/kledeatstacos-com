@@ -13,17 +13,17 @@ const meta = [
   },
   {
     name: "author",
-    content: "Erbil Nas",
+    content: "Mustafa Masri",
   },
   {
     name: "description",
     content:
-      "I'm Erbil, a software engineer who loves to create things and share knowledge.",
+      "I'm Mustafa, A computer engineering student that likes to create stuff.",
   },
   {
     name: "keywords",
     content:
-      "erbil, nas, software, engineer, developer, web, mobile, erbil nas, technology, website, personal, blog, portfolio, mentalmynx",
+      "software, engineer, developer, web, mobile, technology, website, personal, blog, portfolio",
   },
   {
     name: "robots",
@@ -38,22 +38,14 @@ const meta = [
 const appConfig = {
   profiles: {
     linkedin: process.env.LINKEDIN_PROFILE,
-    trendyol: process.env.LINKEDIN_TRENDYOL,
-    spotify: process.env.SPOTIFY_PROFILE,
     github: process.env.GITHUB_PROFILE,
-    hltb: process.env.HLTB_PROFILE,
     twitter: process.env.TWITTER_PROFILE,
     instagram: process.env.INSTAGRAM_PROFILE,
-    luv: process.env.LUV_PROFILE,
-    goodreads: process.env.GOODREADS_PROFILE,
     steam: process.env.STEAM_PROFILE,
     twitch: process.env.TWITCH_PROFILE,
     youtube: process.env.YOUTUBE_PROFILE,
-    medium: process.env.MEDIUM_PROFILE,
   },
-  maps: {
-    placesBeen: process.env.PLACES_BEEN_URL,
-  },
+
   themes: {
     dark: process.env.NUXT_APP_DARK_THEME,
     light: process.env.NUXT_APP_LIGHT_THEME,
@@ -62,7 +54,6 @@ const appConfig = {
 };
 
 const runtimeConfig = {
-  hltbApi: process.env.HLTB_API,
   rss2Json: {
     apiKey: process.env.RSS2JSON_API_KEY,
   },
@@ -77,7 +68,6 @@ const runtimeConfig = {
     firstWorkExperience: process.env.FIRST_WORK_EXPERIENCE_DATE,
   },
 };
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [

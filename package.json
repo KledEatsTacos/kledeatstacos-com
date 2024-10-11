@@ -17,6 +17,7 @@
     "@vercel/speed-insights": "^1.0.9",
     "howlongtobeat": "^1.8.0",
     "nuxt": "^3.10.1",
+    "pinia": "^2.2.4",
     "primeicons": "^7.0.0",
     "primevue": "^3.49.1",
     "vue": "^3.4.15",
