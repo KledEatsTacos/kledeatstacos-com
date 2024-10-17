@@ -1,12 +1,12 @@
 <template>
   <Card>
-    <template #title>Erbil Nas</template>
+    <template #title>Mustafa Masri</template>
 
-    <template #subtitle>Software Engineer</template>
+    <template #subtitle>Computer Engineering student</template>
 
     <template #content>
       <div class="content">
-        <div>An ever-learning technology enthusiast.</div>
+        <div>Always learning new things</div>
         <div>
           <Button
             v-for="({ icon, onClick, ariaLabel }, index) in socialMediaButtons"
@@ -42,25 +42,20 @@ const {
     github,
     instagram,
     steam,
-    goodreads,
-    medium,
     twitch,
     youtube,
   },
 } = useAppConfig();
 
 const aboutMeWriting = ref(
-  `Introducing myself is always a challenge, but here's a brief glimpse into who I am: I'm a software engineer, constantly learning and passionate about building my future with zeros and ones. I'm ${age.value} years old, born and raised in Turkey. In terms of appearance, I'm of average height and slightly leaner than
-    most. You'll usually find me sporting short hair and a beard, and on
-    sunny days, I'll have sunglasses on due to an eye issue—those sun rays
-    are no friend of mine. My love for computer technologies, software, and video games dates
-    back to my childhood, which ultimately led me to pursue a career in
-    software engineering. While I may not be the most social person, those
-    close to me know that I can be quite chatty when discussing topics I'm
-    passionate about. ^_^ As for my inner world, others have described me as intelligent,
-    sophisticated, cultured, dignified, gentle, calm, and humble. While I
-    appreciate these positive qualities, I'm more focused on doing what's
-    right rather than being perceived as good or bad. I hope this brief introduction gives you a glimpse into who I am. Thank you for taking the time to get to know me. Take care and stay safe!`
+  `Looks like you stumbled upon my website! Here's a brief glimpse of who I am: I'm a computer engineering student at Sakarya University, constantly trying to learn and improve myself. I'm ${age.value} years old, Syrian, born and raised in Saudi Arabia.
+    My love for computers was born the moment my father bought us our first computer (which I ruined in a week).
+    this has ultimately led me to pursue a career in computer engineering.
+    Sometimes I may not seem like a very social person, but once you get to know me, 
+    you'll find that I'm a sparkling conversationalist.
+    Others have often described me as a smart and intelligent man (with a really good sense of humor).
+    While I am very flattered by these kind words, I just try to the right thing.
+    I would like to thank you for taking the time to read all of this, it means the world to me. Stay safe!`
 );
 
 const aboutMeWritingParagraphs = aboutMeWriting.value.split(".");
@@ -97,11 +92,6 @@ const socialMediaButtons = [
     onClick: () => useOpenUrl(steam),
   },
   {
-    icon: "fa-brands fa-goodreads",
-    ariaLabel: "Goodreads",
-    onClick: () => useOpenUrl(goodreads),
-  },
-  {
     icon: "pi pi-twitch",
     ariaLabel: "Twitch",
     onClick: () => useOpenUrl(twitch),
@@ -110,11 +100,6 @@ const socialMediaButtons = [
     icon: "pi pi-youtube",
     ariaLabel: "YouTube",
     onClick: () => useOpenUrl(youtube),
-  },
-  {
-    icon: "fa-brands fa-medium",
-    ariaLabel: "Medium",
-    onClick: () => useOpenUrl(medium),
   },
 ];
 </script>

@@ -7,7 +7,7 @@
     </template>
 
     <template #footer>
-      <p>Talk is cheap. Show me the code.</p>
+      <p>My work</p>
     </template>
   </Card>
 </template>

@@ -5,9 +5,9 @@
         <div>
           {{ copyrightText }}
 
-          <NuxtLink :to="luv" rel="noopener" target="__blank">
+          
             {{ theme == themes.dark ? "🤍" : "🖤" }}
-          </NuxtLink>
+          
         </div>
       </template>
 
@@ -22,7 +22,7 @@
 
           <Button
             :label="
-              theme == themes.dark ? 'Be a Jedi' : 'Come to the Dark Side'
+              theme == themes.dark ? 'Light theme' : 'Dark theme'
             "
             text
             @click="toggleTheme"
@@ -50,7 +50,7 @@ import { version } from "@@/package.json";
 const store = useDefaultStore();
 const dayjs = useDayjs();
 const {
-  profiles: { twitter, instagram, linkedin, luv, github, youtube },
+  profiles: { twitter, instagram, linkedin, github, youtube },
   themes,
 } = useAppConfig();
 

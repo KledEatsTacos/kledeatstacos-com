@@ -1,21 +1,18 @@
 <template>
-  <Card @click="useOpenUrl(placesBeen)">
+  <Card>
     <template #header>
       <div class="card-header">
         <i class="pi pi-compass" />
       </div>
     </template>
 
-    <template #title> The Hitchhiker's Guide </template>
+    <template #title> Coming soon </template>
 
-    <template #subtitle> Veni, vidi, vici! </template>
+    <template #subtitle> This feature is not available yet. </template>
   </Card>
 </template>
 
 <script lang="ts" setup>
-const {
-  maps: { placesBeen },
-} = useAppConfig();
 </script>
 
 <style lang="scss" scoped>

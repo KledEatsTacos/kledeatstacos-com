@@ -19,14 +19,6 @@ export const useDefaultStore = defineStore({
       storefront: "",
       description: "",
     },
-    recentPosts: {
-      title: "",
-      link: "",
-      feed: "",
-      status: "",
-      publishedDate: "",
-      description: "",
-    },
   }),
   actions: {},
 });

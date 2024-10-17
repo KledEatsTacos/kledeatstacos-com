@@ -1,22 +1,19 @@
 <template>
-  <Card @click="useOpenUrl(goodreads)">
+  <Card>
     <template #header>
       <div class="card-header">
         <i class="pi pi-book" />
       </div>
     </template>
 
-    <template #title> Bookshelf </template>
+    <template #title> Coming soon </template>
 
-    <template #subtitle> Look at what I'm reading now! </template>
+    <template #subtitle> This feature is not available yet. </template>
   </Card>
 </template>
 
 <script lang="ts" setup>
-const {
-  profiles: { goodreads },
-} = useAppConfig();
-</script>
+  </script>
 
 <style lang="scss" scoped>
 .card-header {
