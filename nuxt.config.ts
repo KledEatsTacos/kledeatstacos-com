@@ -54,9 +54,6 @@ const appConfig = {
 };
 
 const runtimeConfig = {
-  rss2Json: {
-    apiKey: process.env.RSS2JSON_API_KEY,
-  },
   spotify: {
     tokenApi: process.env.SPOTIFY_TOKEN_API,
     playerApi: process.env.SPOTIFY_PLAYER_API,
