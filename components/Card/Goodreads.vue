@@ -2,7 +2,7 @@
   <Card>
     <template #header>
       <div class="card-header">
-        <i class="pi pi-book" />
+        <i class="pi pi-cog" />
       </div>
     </template>
 
@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts" setup>
-  </script>
+</script>
 
 <style lang="scss" scoped>
 .card-header {
@@ -31,7 +31,7 @@
   }
 }
 
-.pi-book {
+.pi-cog {
   font-size: 8rem;
 }
 

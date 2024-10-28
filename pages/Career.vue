@@ -1,5 +1,6 @@
 <template>
   <div class="career">
+    <!--
     <SelectButton
       class="career__switch-type"
       v-model="careerType"
@@ -11,10 +12,11 @@
         }
       "
     />
+    -->
 
-    <ExperienceTimeline v-if="isCareerTypeExperience" />
+    <!-- <ExperienceTimeline v-if="isCareerTypeExperience" /> -->
 
-    <EducationTimeline v-else />
+    <EducationTimeline />
   </div>
 </template>
 
@@ -24,15 +26,15 @@ const CAREER_TYPE = {
   EDUCATION: "Education",
 };
 
-const careerTypes = ref(["Experience", "Education"]);
-const careerType = ref(CAREER_TYPE.EXPERIENCE);
+// const careerTypes = ref(["Experience", "Education"]);
+// const careerType = ref(CAREER_TYPE.EXPERIENCE);
 
-const isCareerTypeExperience = computed(
-  () => careerType.value === CAREER_TYPE.EXPERIENCE
-);
+// const isCareerTypeExperience = computed(
+//   () => careerType.value === CAREER_TYPE.EXPERIENCE
+// );
 
 useHead({
-  title: "Career | It's me, Erbil",
+  title: "Career",
 });
 </script>
 

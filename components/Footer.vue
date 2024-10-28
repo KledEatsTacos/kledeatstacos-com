@@ -13,12 +13,14 @@
 
       <template #center>
         <div class="center">
-          <Button
+            <!--
+            <Button
             v-tooltip.top="versionText"
             label="Changelog"
             text
             @click="changelogVisible = true"
-          />
+            />
+            
 
           <Button
             :label="
@@ -27,6 +29,8 @@
             text
             @click="toggleTheme"
           />
+        -->
+
         </div>
       </template>
 

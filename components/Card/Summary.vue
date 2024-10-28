@@ -49,8 +49,7 @@ const {
 
 const aboutMeWriting = ref(
   `Looks like you stumbled upon my website! Here's a brief glimpse of who I am: I'm a computer engineering student at Sakarya University, constantly trying to learn and improve myself. I'm ${age.value} years old, Syrian, born and raised in Saudi Arabia.
-    My love for computers was born the moment my father bought us our first computer (which I ruined in a week).
-    this has ultimately led me to pursue a career in computer engineering.
+    My love for computers was born the moment my father bought us our first computer (which I ruined in a week). This has ultimately led me to pursue a career in computer engineering.
     Sometimes I may not seem like a very social person, but once you get to know me, 
     you'll find that I'm a sparkling conversationalist.
     Others have often described me as a smart and intelligent man (with a really good sense of humor).

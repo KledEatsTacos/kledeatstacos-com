@@ -2,7 +2,7 @@
   <Card>
     <template #header>
       <div class="card-header">
-        <i class="pi pi-compass" />
+        <i class="pi pi-cog" />
       </div>
     </template>
 
@@ -31,7 +31,7 @@
   }
 }
 
-.pi-compass {
+.pi-cog {
   font-size: 8rem;
 }
 
