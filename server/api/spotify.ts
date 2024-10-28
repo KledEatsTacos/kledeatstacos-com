@@ -12,8 +12,10 @@ const getAccessToken = async () => {
       refresh_token: spotify.refreshToken,
     }),
   });
-
-  return response.json();
+  
+  const data = await response.json();
+  console.log("Access Token Response:", data);
+  return data;
 };
 
 const getCurrentlyPlayingSong = async () => {
