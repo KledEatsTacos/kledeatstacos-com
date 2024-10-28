@@ -25,8 +25,14 @@ const getCurrentlyPlayingSong = async () => {
     },
   });
 
+  if (!response.ok) {
+    console.error("Error fetching currently playing song:", await response.json());
+    return null;
+  }
+
   return response.json();
 };
+
 
 export default defineEventHandler(async (event) => {
   const { player } = getQuery(event);
