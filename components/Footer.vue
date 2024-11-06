@@ -63,7 +63,7 @@ const { changelogVisible, theme } = toRefs(store);
 const versionText = computed(() => `Version ${version}`);
 const copyrightText = computed(() => `${dayjs().year()} © Made with`);
 
-const currentTheme = ref(themes.light);
+const currentTheme = ref(themes.dark);
 
 const toggleTheme = () => {
   const newTheme =
