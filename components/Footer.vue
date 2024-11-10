@@ -14,13 +14,6 @@
       <template #center>
         <div class="center">
             
-            <Button
-            v-tooltip.top="versionText"
-            label="Changelog"
-            text
-            @click="changelogVisible = true"
-            />
-            
 
           <Button
             :label="
