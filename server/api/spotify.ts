@@ -21,13 +21,17 @@ const getAccessToken = async () => {
 const getCurrentlyPlayingSong = async () => {
   const { access_token } = await getAccessToken();
 
-  const response = await fetch(`${spotify.playerApi}/currently-playing`, {
+  const response = await fetch(`${spotify.playerApi}/player/currently-playing`, {
     headers: {
       Authorization: `Bearer ${access_token}`,
     },
   });
 
   if (!response.ok) {
+    if (response.status === 404) {
+      console.error("No active playback found");
+      return null;
+    }
     console.error("Error fetching currently playing song:", await response.json());
     return null;
   }
@@ -35,20 +39,23 @@ const getCurrentlyPlayingSong = async () => {
   return response.json();
 };
 
-
 export default defineEventHandler(async (event) => {
   const { player } = getQuery(event);
 
   if (player === "currently-playing") {
     try {
       const { item } = await getCurrentlyPlayingSong();
+      
+      if (!item) {
+        return "No song is currently playing.";
+      }
 
       const { artists, name } = item;
-
       const player_message = `${artists[0].name} - ${name}`;
 
       return player_message;
     } catch (error) {
+      console.error("Error in event handler:", error);
       return "No song is currently playing.";
     }
   }
