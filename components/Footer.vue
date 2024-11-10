@@ -13,7 +13,7 @@
 
       <template #center>
         <div class="center">
-            <!--
+            
             <Button
             v-tooltip.top="versionText"
             label="Changelog"
@@ -29,7 +29,7 @@
             text
             @click="toggleTheme"
           />
-        -->
+        
 
         </div>
       </template>
