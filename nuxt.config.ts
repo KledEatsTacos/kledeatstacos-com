@@ -104,7 +104,7 @@ export default defineNuxtConfig({
         {
           id: "theme-link",
           rel: "stylesheet",
-          href: process.env.NUXT_APP_LIGHT_THEME,
+          href: process.env.NUXT_APP_DARK_THEME,
         },
       ],
       script: [
