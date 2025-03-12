@@ -106,6 +106,24 @@ export default defineNuxtConfig({
           rel: "stylesheet",
           href: process.env.NUXT_APP_DARK_THEME,
         },
+        {
+          id: "theme-link",
+          rel: "stylesheet",
+          href: process.env.NUXT_APP_DARK_THEME,
+        },
+        {
+          rel: 'icon',
+          type: 'image/png',
+          href: '/TacoFavicon192.png'
+        },
+        {
+          rel: 'apple-touch-icon',
+          href: '/TacoFavicon192.png'
+        },
+        {
+          rel: 'manifest',
+          href: '/site.webmanifest'
+        }
       ],
       script: [
         {
