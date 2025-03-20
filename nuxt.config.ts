@@ -38,14 +38,13 @@ const meta = [
 const appConfig = {
   profiles: {
     linkedin: process.env.LINKEDIN_PROFILE,
-    spotify: process.env.SPOTIFY_PROFILE,
     github: process.env.GITHUB_PROFILE,
-    hltb: process.env.HLTB_PROFILE,
     twitter: process.env.TWITTER_PROFILE,
     instagram: process.env.INSTAGRAM_PROFILE,
     steam: process.env.STEAM_PROFILE,
     twitch: process.env.TWITCH_PROFILE,
     youtube: process.env.YOUTUBE_PROFILE,
+    lastfm: process.env.LASTFM_PROFILE,
   },
   themes: {
     dark: process.env.NUXT_APP_DARK_THEME,
@@ -55,12 +54,10 @@ const appConfig = {
 };
 
 const runtimeConfig = {
-  hltbApi: process.env.HLTB_API,
-  spotify: {
-    tokenApi: process.env.SPOTIFY_TOKEN_API,
-    playerApi: process.env.SPOTIFY_PLAYER_API,
-    refreshToken: process.env.SPOTIFY_REFRESH_TOKEN,
-    clientToken: process.env.SPOTIFY_CLIENT_TOKEN,
+  lastfm: {
+    apiKey: process.env.LASTFM_API_KEY,
+    username: process.env.LASTFM_USERNAME,
+    apiUrl: 'https://ws.audioscrobbler.com/2.0/',
   },
   stats: {
     birthday: process.env.MY_BIRTHDAY_DATE,

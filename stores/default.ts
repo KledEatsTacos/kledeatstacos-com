@@ -10,15 +10,7 @@ export const useDefaultStore = defineStore({
     age: 0,
     theme: darkTheme,
     currentlyPlaying: "",
-    hltb: {
-      title: "",
-      platform: "",
-      image: "",
-      progress: 0,
-      status: "",
-      storefront: "",
-      description: "",
-    },
+    // Removed HLTB state
   }),
   actions: {},
 });

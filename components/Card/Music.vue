@@ -1,5 +1,5 @@
 <template>
-  <Card @click="useOpenUrl(spotify)">
+  <Card class="music-card">
     <template #subtitle> Listening Now </template>
 
     <template #content>
@@ -16,11 +16,10 @@
 
 <script lang="ts" setup>
 const {
-  profiles: { spotify },
+  profiles: { lastfm },
 } = useAppConfig();
 
 const store = useDefaultStore();
-
 const { currentlyPlaying } = toRefs(store);
 </script>
 
@@ -53,6 +52,10 @@ const { currentlyPlaying } = toRefs(store);
       animation-delay: -3.7s;
     }
   }
+}
+
+.music-card {
+  cursor: default !important;
 }
 
 @keyframes bounce {

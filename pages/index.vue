@@ -2,7 +2,7 @@
   <main>
     <div class="flex-column">
       <CardSummary class="summary-card" />
-      <CardSpotify />
+      <CardMusic />
 
       <div class="flex-row">
         <KnobCollection />
@@ -30,34 +30,19 @@
 </template>
 
 <script lang="ts" setup>
-
-
-type HLTB = {
-  title: string;
-  platform: string;
-  image: string;
-  progress: number;
-  status: string;
-  storefront: string;
-  description: string;
-};
-
 const store = useDefaultStore();
 
 const ONE_MINUTE = 60_000;
-const HLTB_API = "/api/hltb?status=currently-playing";
-const SPOTIFY_API = "/api/spotify?player=currently-playing";
+const LASTFM_API = "/api/lastfm";
 
 onNuxtReady(async () => {
-  const { data: currentlyPlaying, refresh } = await useFetch(SPOTIFY_API);
-  const { data: hltb } = await useFetch(HLTB_API);
+  const { data: currentlyPlaying, refresh } = await useFetch(LASTFM_API);
 
   setInterval(async () => {
     await refresh();
   }, ONE_MINUTE);
 
   store.currentlyPlaying = currentlyPlaying.value as string;
-  store.hltb = hltb.value as HLTB;
 });
 </script>
 
