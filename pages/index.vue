@@ -5,13 +5,13 @@
       <CardMusic />
 
       <div class="flex-row">
-        <KnobCollection />
+        <CardLanguages />
         <CardGithub />
       </div>
     </div>
 
     <div class="flex-column">
-      <CardHLTB />
+      <CardProjects />
 
       <CardWorkingCompany />
     </div>
