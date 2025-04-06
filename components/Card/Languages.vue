@@ -35,7 +35,7 @@ const languages: Language[] = [
   },
   {
     name: "English",
-    level: "Native/Fluent",
+    level: "Fluent",
     proficiency: 100
   },
   {
