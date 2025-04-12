@@ -10,17 +10,14 @@
       </div>
     </div>
 
-    <div class="flex-column">
-      <CardProjects />
+    <div class="flex-column">      <CardProjects />
 
-      <CardWorkingCompany />
+      <CardComingSoon />
     </div>
 
     <div class="flex-column">
-      <CardRecentPosts />
-
-      <div class="flex-row">
-        <CardPlacesBeen />
+      <CardRecentPosts />      <div class="flex-row">
+        <CardFutureFeature />
         <CardGoodreads />
       </div>
     </div>

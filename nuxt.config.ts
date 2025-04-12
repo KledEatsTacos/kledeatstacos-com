@@ -39,11 +39,6 @@ const appConfig = {
   profiles: {
     linkedin: process.env.LINKEDIN_PROFILE,
     github: process.env.GITHUB_PROFILE,
-    twitter: process.env.TWITTER_PROFILE,
-    instagram: process.env.INSTAGRAM_PROFILE,
-    steam: process.env.STEAM_PROFILE,
-    twitch: process.env.TWITCH_PROFILE,
-    youtube: process.env.YOUTUBE_PROFILE,
     lastfm: process.env.LASTFM_PROFILE,
   },
   themes: {

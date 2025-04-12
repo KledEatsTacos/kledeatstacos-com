@@ -47,7 +47,7 @@ import { version } from "@@/package.json";
 const store = useDefaultStore();
 const dayjs = useDayjs();
 const {
-  profiles: { twitter, instagram, linkedin, github, youtube },
+  profiles: { linkedin, github },
   themes,
 } = useAppConfig();
 
@@ -80,29 +80,14 @@ const toggleTheme = () => {
 
 const socialMediaButtons = [
   {
-    icon: "pi pi-twitter",
-    ariaLabel: "Twitter",
-    onClick: () => useOpenUrl(twitter),
-  },
-  {
     icon: "pi pi-github",
     ariaLabel: "GitHub",
     onClick: () => useOpenUrl(github),
   },
   {
-    icon: "pi pi-instagram",
-    ariaLabel: "Instagram",
-    onClick: () => useOpenUrl(instagram),
-  },
-  {
     icon: "pi pi-linkedin",
     ariaLabel: "LinkedIn",
     onClick: () => useOpenUrl(linkedin),
-  },
-  {
-    icon: "pi pi-youtube",
-    ariaLabel: "YouTube",
-    onClick: () => useOpenUrl(youtube),
   },
 ];
 </script>

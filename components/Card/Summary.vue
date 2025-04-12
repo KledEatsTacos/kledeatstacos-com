@@ -28,13 +28,8 @@
 <script lang="ts" setup>
 const {
   profiles: {
-    twitter,
     linkedin,
     github,
-    instagram,
-    steam,
-    twitch,
-    youtube,
   },
 } = useAppConfig();
 
@@ -44,16 +39,6 @@ const aboutMeWriting = ref(
 
 const socialMediaButtons = [
   {
-    icon: "pi pi-twitter",
-    ariaLabel: "Twitter",
-    onClick: () => useOpenUrl(twitter),
-  },
-  {
-    icon: "pi pi-instagram",
-    ariaLabel: "Instagram",
-    onClick: () => useOpenUrl(instagram),
-  },
-  {
     icon: "pi pi-linkedin",
     ariaLabel: "LinkedIn",
     onClick: () => useOpenUrl(linkedin),
@@ -62,21 +47,6 @@ const socialMediaButtons = [
     icon: "pi pi-github",
     ariaLabel: "GitHub",
     onClick: () => useOpenUrl(github),
-  },
-  {
-    icon: "fa-brands fa-steam",
-    ariaLabel: "Steam",
-    onClick: () => useOpenUrl(steam),
-  },
-  {
-    icon: "pi pi-twitch",
-    ariaLabel: "Twitch",
-    onClick: () => useOpenUrl(twitch),
-  },
-  {
-    icon: "pi pi-youtube",
-    ariaLabel: "YouTube",
-    onClick: () => useOpenUrl(youtube),
   },
 ];
 </script>
