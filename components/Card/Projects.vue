@@ -42,6 +42,12 @@ const projects: Project[] = [
     url: "https://github.com/KledEatsTacos/kledeatstacos-com"
   },
   {
+    name: "Word Spaghetti",
+    description: "Interactive word game where you type to create floating letters that connect to form words",
+    icon: "pi pi-pencil",
+    url: "https://kledeatstacos.github.io/word-spaghetti/"
+  },
+  {
     name: "Calculator",
     description: "A simple calculator project (with a twist!)",
     icon: "pi pi-calculator",
