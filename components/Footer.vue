@@ -65,7 +65,6 @@ const toggleTheme = () => {
   currentTheme.value = newTheme;
   store.theme = newTheme;
 
-  // Find the existing theme link element or create a new one
   let themeLink = document.getElementById("theme-link");
   if (!themeLink) {
     themeLink = document.createElement("link");
@@ -74,7 +73,6 @@ const toggleTheme = () => {
     document.head.appendChild(themeLink);
   }
 
-  // Update the href attribute of the theme link
   themeLink.setAttribute("href", newTheme);
 };
 

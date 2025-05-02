@@ -20,11 +20,20 @@ const getRecentTrack = async () => {
   const tracks = data.recenttracks?.track;
   
   if (!tracks?.length) {
-    return "No track is currently playing.";
+    return { 
+      displayText: "No track is currently playing.",
+      track: null,
+      artist: null
+    };
   }
 
   const track = tracks[0];
-  return `${track.artist['#text']} - ${track.name}`;
+  return {
+    displayText: `${track.artist['#text']} - ${track.name}`,
+    track: track.name,
+    artist: track.artist['#text'],
+    image: track.image?.find(img => img.size === 'large')?.['#text'] || null
+  };
 };
 
 export default defineEventHandler(async () => {
@@ -32,6 +41,10 @@ export default defineEventHandler(async () => {
     return await getRecentTrack();
   } catch (error) {
     console.error('Error in Last.fm event handler:', error);
-    return "No track is currently playing.";
+    return { 
+      displayText: "No track is currently playing.",
+      track: null,
+      artist: null
+    };
   }
 });

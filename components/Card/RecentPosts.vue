@@ -21,7 +21,6 @@
 </template>
 
 <script lang="ts" setup>
-// No need to import store or dayjs since they are not used
 </script>
 
 <style lang="scss" scoped>

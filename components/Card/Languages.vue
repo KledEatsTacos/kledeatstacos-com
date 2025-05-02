@@ -43,11 +43,7 @@ const languages: Language[] = [
     level: "Advanced",
     proficiency: 85
   },
-  {
-    name: "Russian",
-    level: "Beginner",
-    proficiency: 15
-  }
+
 ];
 </script>
 

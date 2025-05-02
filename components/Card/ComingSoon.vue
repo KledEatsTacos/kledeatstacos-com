@@ -6,7 +6,6 @@
 </template>
 
 <script lang="ts" setup>
-// No need to import trendyol profile since it's not used
 </script>
 
 <style scoped>

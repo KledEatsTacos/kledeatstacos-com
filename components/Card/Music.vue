@@ -1,5 +1,5 @@
 <template>
-  <Card class="music-card">
+  <Card class="music-card" @click="openYoutubeVideo">
     <template #subtitle> Listening Now </template>
 
     <template #content>
@@ -20,7 +20,16 @@ const {
 } = useAppConfig();
 
 const store = useDefaultStore();
-const { currentlyPlaying } = toRefs(store);
+const { currentlyPlaying, currentTrackYoutubeUrl } = toRefs(store);
+
+const openYoutubeVideo = () => {
+  if (currentTrackYoutubeUrl.value) {
+    window.open(currentTrackYoutubeUrl.value, '_blank');
+  } else if (currentlyPlaying.value && currentlyPlaying.value !== "No track is currently playing.") {
+    const searchQuery = encodeURIComponent(currentlyPlaying.value);
+    window.open(`https://www.youtube.com/results?search_query=${searchQuery}`, '_blank');
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -55,7 +64,7 @@ const { currentlyPlaying } = toRefs(store);
 }
 
 .music-card {
-  cursor: default !important;
+  cursor: pointer !important;
 }
 
 @keyframes bounce {

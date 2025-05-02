@@ -54,13 +54,11 @@ const runtimeConfig = {
     username: process.env.LASTFM_USERNAME,
     apiUrl: 'https://ws.audioscrobbler.com/2.0/',
   },
-  stats: {
-    birthday: process.env.MY_BIRTHDAY_DATE,
-    firstWorkExperience: process.env.FIRST_WORK_EXPERIENCE_DATE,
-  },
+  youtube: {
+    apiKey: process.env.YOUTUBE_API_KEY,
+  }
 };
 
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: true,
 

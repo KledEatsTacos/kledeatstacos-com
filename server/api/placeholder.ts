@@ -1,4 +1,3 @@
-// Placeholder API for future features
 export default defineEventHandler(async () => {
   return {
     title: "Coming Soon",

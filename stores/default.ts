@@ -10,7 +10,7 @@ export const useDefaultStore = defineStore({
     age: 0,
     theme: darkTheme,
     currentlyPlaying: "",
-    // Removed HLTB state
+    currentTrackYoutubeUrl: "",
   }),
   actions: {},
 });

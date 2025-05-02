@@ -18,7 +18,7 @@
     <div class="flex-column">
       <CardRecentPosts />      <div class="flex-row">
         <CardFutureFeature />
-        <CardGoodreads />
+        <CardFeatureCard1 />
       </div>
     </div>
 
@@ -31,15 +31,43 @@ const store = useDefaultStore();
 
 const ONE_MINUTE = 60_000;
 const LASTFM_API = "/api/lastfm";
+const YOUTUBE_API = "/api/youtube";
 
 onNuxtReady(async () => {
-  const { data: currentlyPlaying, refresh } = await useFetch(LASTFM_API);
+  const updateMusicInfo = async () => {
+    const { data } = await useFetch(LASTFM_API);
+    
+    if (data.value) {
+      const trackInfo = data.value as { 
+        displayText: string; 
+        track: string | null; 
+        artist: string | null;
+      };
+      
+      store.currentlyPlaying = trackInfo.displayText;
+      
+      if (trackInfo.track && trackInfo.artist) {
+        const searchQuery = `${trackInfo.artist} ${trackInfo.track} official`;
+        const { data: youtubeData } = await useFetch(YOUTUBE_API, {
+          query: { q: searchQuery }
+        });
+        
+        if (youtubeData.value && youtubeData.value.videoUrl) {
+          store.currentTrackYoutubeUrl = youtubeData.value.videoUrl as string;
+        } else {
+          store.currentTrackYoutubeUrl = "";
+        }
+      } else {
+        store.currentTrackYoutubeUrl = "";
+      }
+    }
+  };
+
+  await updateMusicInfo();
 
   setInterval(async () => {
-    await refresh();
+    await updateMusicInfo();
   }, ONE_MINUTE);
-
-  store.currentlyPlaying = currentlyPlaying.value as string;
 });
 </script>
 
