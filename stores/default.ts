@@ -11,6 +11,10 @@ export const useDefaultStore = defineStore({
     theme: darkTheme,
     currentlyPlaying: "",
     currentTrackYoutubeUrl: "",
+    currentTrackInfo: {
+      track: null as string | null,
+      artist: null as string | null
+    }
   }),
   actions: {},
 });

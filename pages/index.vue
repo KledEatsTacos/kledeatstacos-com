@@ -31,7 +31,6 @@ const store = useDefaultStore();
 
 const ONE_MINUTE = 60_000;
 const LASTFM_API = "/api/lastfm";
-const YOUTUBE_API = "/api/youtube";
 
 onNuxtReady(async () => {
   const updateMusicInfo = async () => {
@@ -46,20 +45,12 @@ onNuxtReady(async () => {
       
       store.currentlyPlaying = trackInfo.displayText;
       
-      if (trackInfo.track && trackInfo.artist) {
-        const searchQuery = `${trackInfo.artist} ${trackInfo.track} official`;
-        const { data: youtubeData } = await useFetch(YOUTUBE_API, {
-          query: { q: searchQuery }
-        });
-        
-        if (youtubeData.value && youtubeData.value.videoUrl) {
-          store.currentTrackYoutubeUrl = youtubeData.value.videoUrl as string;
-        } else {
-          store.currentTrackYoutubeUrl = "";
-        }
-      } else {
-        store.currentTrackYoutubeUrl = "";
-      }
+      // We no longer fetch YouTube URLs automatically
+      // This will happen on-demand when the user clicks the music card
+      store.currentTrackInfo = {
+        track: trackInfo.track,
+        artist: trackInfo.artist
+      };
     }
   };
 
