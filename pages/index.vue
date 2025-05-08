@@ -3,20 +3,20 @@
     <div class="flex-column">
       <CardSummary class="summary-card" />
       <CardMusic />
+      <CardSteam />
+    </div>
 
+    <div class="flex-column">
+      <CardProjects />
       <div class="flex-row">
         <CardLanguages />
         <CardGithub />
       </div>
     </div>
 
-    <div class="flex-column">      <CardProjects />
-
-      <CardComingSoon />
-    </div>
-
     <div class="flex-column">
-      <CardRecentPosts />      <div class="flex-row">
+      <CardRecentPosts />
+      <div class="flex-row">
         <CardFutureFeature />
         <CardFeatureCard1 />
       </div>

@@ -56,6 +56,10 @@ const runtimeConfig = {
   },
   youtube: {
     apiKey: process.env.YOUTUBE_API_KEY,
+  },
+  steam: {
+    apiKey: process.env.STEAM_API_KEY,
+    steamId: process.env.STEAM_ID, // Your SteamID64
   }
 };
 
