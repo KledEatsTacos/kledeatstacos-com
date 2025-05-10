@@ -41,8 +41,8 @@ You can see a live version of this portfolio at: [https://kledeatstacos.com](htt
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/KledEatsTacos/your-repo-name.git # Replace with your actual repo URL
-    cd your-repo-name
+    git clone https://github.com/KledEatsTacos/kledeatstacos-com.git
+    cd kledeatstacos-com
     ```
 
 2.  **Install dependencies:**
