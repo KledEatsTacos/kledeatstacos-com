@@ -15,15 +15,16 @@
         <i class="pi pi-info-circle" />
         <span>No recent Steam activity or profile is private.</span>
       </div>
-      <div v-else class="games-list">        <a 
+      <div v-else class="games-list">
+        <a 
           v-for="game in games" 
           :key="game.appId" 
           :href="game.store_link" 
           target="_blank" 
           class="game-entry p-ripple"
           v-ripple
-          :style="{ backgroundImage: `url(${game.header_image})` }"
         >
+          <img :src="game.header_image" :alt="game.name" class="game-image" />
           <div class="game-info">
             <span class="game-name">{{ game.name }}</span>
             <span class="game-playtime">{{ game.playtime_2weeks }} in last 2 weeks</span>
@@ -97,39 +98,31 @@ onMounted(async () => {
 
 .game-entry {
   display: flex;
-  align-items: flex-end;
-  position: relative;
-  height: 100px;
-  padding: 1rem;
+  align-items: center;
+  gap: 0.75rem; // Space between image and text
+  padding: 0.5rem;
   border-radius: var(--border-radius);
-  transition: transform 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
   text-decoration: none;
   color: inherit;
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.1) 100%);
-    z-index: 1;
-  }
 
   &:hover {
-    transform: scale(1.02);
+    background-color: var(--surface-hover);
   }
+}
+
+.game-image {
+  width: 120px; // Adjust as needed
+  height: auto; // Maintain aspect ratio, header.jpg is usually 460x215
+  max-height: 56px; // header.jpg aspect ratio is ~2.13, so 120/2.13 = 56.3
+  border-radius: var(--border-radius-sm);
+  object-fit: cover;
 }
 
 .game-info {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  z-index: 2;
+  flex-grow: 1;
 }
 
 .game-name {
@@ -137,16 +130,12 @@ onMounted(async () => {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: white;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
-  margin-bottom: 0.25rem;
 }
 
 .game-playtime,
 .game-playtime-total {
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.9);
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+  color: var(--text-color-secondary);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

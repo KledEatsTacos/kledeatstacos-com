@@ -2,24 +2,17 @@
   <main>
     <div class="flex-column">
       <CardSummary class="summary-card" />
-      <CardMusic />
-      <CardSteam />
+      <CardLanguages />
+      
     </div>
-
     <div class="flex-column">
       <CardProjects />
-      <div class="flex-row">
-        <CardLanguages />
-        <CardGithub />
-      </div>
+      <CardMusic />
     </div>
-
+    
     <div class="flex-column">
-      <CardRecentPosts />
-      <div class="flex-row">
-        <CardFutureFeature />
-        <CardFeatureCard1 />
-      </div>
+      <CardSteam />
+      <CardGithub />
     </div>
 
     <ScrollTop />

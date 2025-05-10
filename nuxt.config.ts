@@ -45,7 +45,6 @@ const appConfig = {
     dark: process.env.NUXT_APP_DARK_THEME,
     light: process.env.NUXT_APP_LIGHT_THEME,
   },
-  profilePicture: process.env.PROFILE_PICTURE_URL,
 };
 
 const runtimeConfig = {
@@ -92,13 +91,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "en",
       },
-      meta,
-      link: [
-        {
-          id: "theme-link",
-          rel: "stylesheet",
-          href: process.env.NUXT_APP_DARK_THEME,
-        },
+      meta,      link: [
         {
           id: "theme-link",
           rel: "stylesheet",

@@ -29,12 +29,11 @@ const buttonGroup = [
     icon: "pi pi-home",
     text: true,
     click: () => router.push("/"),
-  },
-  {
-    label: "Career",
-    icon: "pi pi-briefcase",
+  },  {
+    label: "Education",
+    icon: "pi pi-book",
     text: true,
-    click: () => router.push("/career"),
+    click: () => router.push("/education"),
   },
   {
     label: "About",

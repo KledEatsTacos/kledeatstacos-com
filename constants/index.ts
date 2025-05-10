@@ -1,13 +1,3 @@
-export const WORKPLACES = [
-  {
-    name: "Otokar",
-    title: "Internship",
-    range: "Jul 2017 - Aug 2017",
-    description:
-      "Otokar, one of the Koç Group companies, has been providing custom solutions tailored to the needs of its customers with its own technology, design, and applications since 1963. It operates with over 2000 employees in its factory located on a 552,000 m² area in Sakarya.",
-  },
-];
-
 export const EDUCATIONS = [
   {
     name: "Sakarya University",

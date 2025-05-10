@@ -90,8 +90,4 @@ const languages: Language[] = [
 .progress-turkish :deep(.p-progressbar-value) {
   background: #e63946;
 }
-
-.progress-russian :deep(.p-progressbar-value) {
-  background: #fb8b24;
-}
 </style>
