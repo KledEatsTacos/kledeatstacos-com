@@ -44,10 +44,9 @@ export default defineEventHandler(async () => {
   }
 
   const params = new URLSearchParams({
-    key: steam.apiKey,
-    steamid: steam.steamId,
+    key: steam.apiKey,    steamid: steam.steamId,
     format: 'json',
-    count: '3', // Fetching up to 3 games as discussed
+    count: '3'
   });
 
   const apiUrl = `https://api.steampowered.com/IPlayerService/GetRecentlyPlayedGames/v0001/?${params}`;

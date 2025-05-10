@@ -6,8 +6,6 @@
     <slot />
 
     <Footer />
-
-    <SidebarChangelog />
   </main>
 </template>
 

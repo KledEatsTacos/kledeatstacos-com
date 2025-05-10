@@ -16,8 +16,7 @@ useHead({
 .education {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
-
+  gap: 2rem;
   animation: fadeIn 0.5s;
 }
 </style>

@@ -39,7 +39,6 @@ const appConfig = {
   profiles: {
     linkedin: process.env.LINKEDIN_PROFILE,
     github: process.env.GITHUB_PROFILE,
-    lastfm: process.env.LASTFM_PROFILE,
   },
   themes: {
     dark: process.env.NUXT_APP_DARK_THEME,
@@ -56,9 +55,8 @@ const runtimeConfig = {
   youtube: {
     apiKey: process.env.YOUTUBE_API_KEY,
   },
-  steam: {
-    apiKey: process.env.STEAM_API_KEY,
-    steamId: process.env.STEAM_ID, // Your SteamID64
+  steam: {    apiKey: process.env.STEAM_API_KEY,
+    steamId: process.env.STEAM_ID
   }
 };
 

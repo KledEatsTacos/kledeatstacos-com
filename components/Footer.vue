@@ -42,8 +42,6 @@
 </template>
 
 <script lang="ts" setup>
-import { version } from "@@/package.json";
-
 const store = useDefaultStore();
 const dayjs = useDayjs();
 const {
@@ -51,9 +49,8 @@ const {
   themes,
 } = useAppConfig();
 
-const { changelogVisible, theme } = toRefs(store);
+const { theme } = toRefs(store);
 
-const versionText = computed(() => `Version ${version}`);
 const copyrightText = computed(() => `${dayjs().year()} © Made with`);
 
 const currentTheme = ref(themes.dark);

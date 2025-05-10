@@ -36,10 +36,7 @@ onNuxtReady(async () => {
         artist: string | null;
       };
       
-      store.currentlyPlaying = trackInfo.displayText;
-      
-      // We no longer fetch YouTube URLs automatically
-      // This will happen on-demand when the user clicks the music card
+      store.currentlyPlaying = trackInfo.displayText;      
       store.currentTrackInfo = {
         track: trackInfo.track,
         artist: trackInfo.artist
@@ -100,6 +97,7 @@ main {
     flex: 1;
     flex-direction: column;
     gap: 1rem;
+    min-width: 0; // Added to help with flex sizing
   }
 
   @media (max-width: 1366px) {

@@ -80,7 +80,7 @@ onMounted(async () => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 150px; // Adjust as needed
+  min-height: 150px;
   text-align: center;
   gap: 0.5rem;
 
@@ -112,7 +112,7 @@ onMounted(async () => {
 }
 
 .game-image {
-  width: 120px; // Adjust as needed
+  width: 120px;
   height: auto; // Maintain aspect ratio, header.jpg is usually 460x215
   max-height: 56px; // header.jpg aspect ratio is ~2.13, so 120/2.13 = 56.3
   border-radius: var(--border-radius-sm);
