@@ -6,12 +6,12 @@ NOTE: I use lots of AI to help me, because it saves me lots of time (yippie vibe
 
 ## Live Demo
 
-You can see a live version of this portfolio at: [https://kledeatstacos.com](https://kledeatstacos.com) (Replace with your actual domain if different)
+You can see a live version of this portfolio at: [https://kledeatstacos.com](https://kledeatstacos.com)
 
 ## Features
 
 *   Dynamic display of personal information and summary.
-*   Integration with Last.fm to show currently playing music.
+*   Integration with Last.fm to show currently playing music, since I use Youtube music and not Spotify.
 *   Integration with Steam to display recent game activity.
 *   Showcase of projects with descriptions.
 *   Display of language proficiencies.
@@ -81,7 +81,8 @@ This project uses environment variables to manage API keys and other sensitive o
     *   `LASTFM_API_KEY`: Your Last.fm API key.
     *   `LASTFM_USERNAME`: Your Last.fm username.
     *   `YOUTUBE_API_KEY`: Your YouTube Data API v3 key.
-    *   `STEAM_API_KEY`: Your Steam Web API key. **Note:** This key is often domain-restricted. For local development, it usually needs to be configured for `localhost`. For production, you'll need a key configured for your actual domain.
+    *   `STEAM_API_KEY`: Your Steam Web API key.
+    *   **VERY VERY IMPORTANT:** When you request a Steam API key, it will ask you for a domain name. For testing, the API key needs to be configured for `localhost`. For production, you'll need to recreate the API key configured to your actual domain name.
     *   `STEAM_ID`: Your 64-bit Steam ID.
 
     **Where to get API Keys:**
@@ -105,7 +106,7 @@ Using yarn:
 ```bash
 yarn dev
 ```
-This will start the Nuxt development server, typically at `http://localhost:3000`.
+This will start the Nuxt development server, it will tell you where to find it, but it is typically at `http://localhost:3000` or `http://localhost:3001`.
 
 ## Building for Production
 
@@ -129,7 +130,7 @@ This will create a `.output` directory with the production-ready build of your a
 
 You can deploy the generated `.output` directory to any static hosting provider or Node.js compatible platform.
 
-*   **Vercel / Netlify:** These platforms often have excellent integration with Nuxt 3. You can usually connect your Git repository, and they will handle the build and deployment process automatically. Remember to configure your environment variables in the platform's settings.
+*   **Vercel / Netlify:** I use Vercel, but you can also use Netlify. These platforms often have excellent integration with Nuxt 3. You can usually connect your Git repository, and they will handle the build and deployment process automatically. Remember to configure your environment variables in the platform's settings.
 *   **Node.js Server:** You can serve the application using the server in the `.output/server` directory.
     ```bash
     node .output/server/index.mjs
@@ -137,9 +138,4 @@ You can deploy the generated `.output` directory to any static hosting provider 
 
 ## Acknowledgements
 
-*   This project is an adaptation of the portfolio originally created by [erbilnas](https://github.com/erbilnas/portfolio).
-*   Thanks to the creators and maintainers of Nuxt, PrimeVue, and all other open-source libraries used in this project.
-
----
-
-*This README was last updated on May 10, 2025.*
+*   This project is an adaptation of version 5 of the portfolio originally created by [erbilnas](https://github.com/erbilnas/portfolio). Many thanks to him for sharing the source code!
