@@ -11,6 +11,9 @@ jobs:
   automerge:
     if: github.actor == 'dependabot[bot]'
     runs-on: ubuntu-latest
+    permissions: # Add this section
+      contents: write
+      pull-requests: write
     steps:
       - uses: actions-ecosystem/action-add-labels@v1
         with:
