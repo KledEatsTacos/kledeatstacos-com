@@ -11,16 +11,21 @@ jobs:
   automerge:
     if: github.actor == 'dependabot[bot]'
     runs-on: ubuntu-latest
-    permissions: # Add this section
-      contents: write
-      pull-requests: write
     steps:
-      - uses: actions-ecosystem/action-add-labels@v1
+      - name: Add automerge label
+        uses: actions/github-script@v6
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          labels: automerge
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+              labels: ['automerge']
+            });
 
-      - uses: actions/github-script@v6
+      - name: Auto-merge PR if clean
+        uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
