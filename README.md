@@ -30,8 +30,8 @@ You can see a live version of this portfolio at: [https://kledeatstacos.com](htt
 
 ## Prerequisites
 
-*   [Bun](https://bun.sh/docs/installation) (Recommended)
-    *   Alternatively, [Node.js](https://nodejs.org/) (LTS version) and npm/yarn.
+*   [Node.js](https://nodejs.org/) (LTS version) and npm/yarn.
+    *   Alternatively, [Bun](https://bun.sh/docs/installation)
 *   API Keys for:
     *   Last.fm
     *   Steam
@@ -46,13 +46,13 @@ You can see a live version of this portfolio at: [https://kledeatstacos.com](htt
     ```
 
 2.  **Install dependencies:**
-    Using Bun (recommended):
-    ```bash
-    bun install
-    ```
-    Alternatively, using npm:
+    Using npm:
     ```bash
     npm install
+    ```
+    Or using bun:
+    ```bash
+    bun install
     ```
     Or using yarn:
     ```bash
@@ -111,13 +111,13 @@ This will start the Nuxt development server, typically at `http://localhost:3000
 
 To build the application for production:
 
-Using Bun:
-```bash
-bun run build
-```
 Using npm:
 ```bash
 npm run build
+```
+Using Bun:
+```bash
+bun run build
 ```
 Using yarn:
 ```bash
@@ -129,7 +129,7 @@ This will create a `.output` directory with the production-ready build of your a
 
 You can deploy the generated `.output` directory to any static hosting provider or Node.js compatible platform.
 
-*   **Vercel / Netlify:** These platforms often have excellent integration with Nuxt 3. You can usually connect your Git repository, and they will handle the build and deployment process automatically. Remember to configure your environment variables in the platform's settings.
+*   **Vercel / Netlify:** These platforms are perfect. You can usually connect your Git repository, and they will handle the build and deployment process automatically. Remember to configure your environment variables (API keys and such) in the platform's settings.
 *   **Node.js Server:** You can serve the application using the server in the `.output/server` directory.
     ```bash
     node .output/server/index.mjs
