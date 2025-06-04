@@ -18,7 +18,7 @@
     "nuxt": "^3.13.2",
     "pinia": "^2.2.4",
     "primeicons": "^7.0.0",
-    "primevue": "^3.53.0",
+    "primevue": "^4.3.5",
     "ufo": "^1.5.4",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"
