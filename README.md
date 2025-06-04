@@ -6,7 +6,7 @@ NOTE: I use lots of AI to help me, because it saves me lots of time (yippie vibe
 
 ## Live Demo
 
-You can see a live version of this portfolio at: [https://kledeatstacos.com](https://kledeatstacos.com) (Replace with your actual domain if different)
+You can see a live version of this portfolio at: [https://kledeatstacos.com](https://kledeatstacos.com)
 
 ## Features
 
@@ -41,8 +41,8 @@ You can see a live version of this portfolio at: [https://kledeatstacos.com](htt
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/KledEatsTacos/your-repo-name.git # Replace with your actual repo URL
-    cd your-repo-name
+    git clone https://github.com/KledEatsTacos/kledeatstacos-com
+    cd kledeatstacos-com
     ```
 
 2.  **Install dependencies:**
@@ -134,12 +134,3 @@ You can deploy the generated `.output` directory to any static hosting provider 
     ```bash
     node .output/server/index.mjs
     ```
-
-## Acknowledgements
-
-*   This project is an adaptation of the portfolio originally created by [erbilnas](https://github.com/erbilnas/portfolio).
-*   Thanks to the creators and maintainers of Nuxt, PrimeVue, and all other open-source libraries used in this project.
-
----
-
-*This README was last updated on May 10, 2025.*
