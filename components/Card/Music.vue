@@ -9,6 +9,10 @@
         <Skeleton v-if="!currentlyPlaying"></Skeleton>
 
         <span>{{ currentlyPlaying }}</span>
+        
+        <div class="click-indicator">
+          <span class="click-text">Click me!</span>
+        </div>
       </div>
     </template>
   </Card>
@@ -63,6 +67,24 @@ const openYoutubeVideo = async () => {
   flex-direction: row;
   align-items: center;
   gap: 1rem;
+  position: relative;
+}
+
+.click-indicator {
+  margin-left: auto;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.click-text {
+  font-size: 0.75rem;
+  color: var(--primary-color);
+  font-style: italic;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.music-card:hover .click-indicator {
+  opacity: 1;
 }
 
 .equalizer {
@@ -111,6 +133,15 @@ const openYoutubeVideo = async () => {
 
   100% {
     transform: scaleY(0.6);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
   }
 }
 </style>
