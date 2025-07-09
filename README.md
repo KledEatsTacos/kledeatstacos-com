@@ -11,7 +11,7 @@ You can see a live version of this portfolio at: [https://kledeatstacos.com](htt
 ## Features
 
 *   Dynamic display of personal information and summary.
-*   Integration with Last.fm to show currently playing music.
+*   Integration with Last.fm to show currently playing music. (I use YouTube Music, not Spotify.)
 *   Integration with Steam to display recent game activity.
 *   Showcase of projects with descriptions.
 *   Display of language proficiencies.
