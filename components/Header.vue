@@ -45,11 +45,9 @@ const buttonGroup = [
   },
   {
     label: "Contact",
-    icon: "pi pi-phone",
+    icon: "pi pi-envelope",
     text: true,
-    disabled: true,
-    badge: "soon",
-    badgeSeverity: "contrast",
+    click: () => router.push("/contact"),
   },
 ];
 </script>
