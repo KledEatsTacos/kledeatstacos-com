@@ -11,7 +11,7 @@
         <span>{{ currentlyPlaying }}</span>
         
         <div class="click-indicator">
-          <span class="click-text">Click me!</span>
+          <span class="click-text">Click to listen</span>
         </div>
       </div>
     </template>
