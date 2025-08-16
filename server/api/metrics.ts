@@ -1,5 +1,4 @@
 export default defineEventHandler(async (event) => {
-  // Site performance metrics endpoint  
   if (process.env.NODE_ENV !== 'production') {
     return { status: 'development' }
   }
@@ -14,12 +13,10 @@ export default defineEventHandler(async (event) => {
     const headers = getHeaders(event)
     
     if (method === 'GET') {
-      // Return analytics client configuration
       return { config: JSON.parse(config) }
     }
     
     if (method === 'POST') {
-      // Process analytics data
       const body = await readBody(event)
       const processor = process.env.ANALYTICS_PROCESSOR
       
