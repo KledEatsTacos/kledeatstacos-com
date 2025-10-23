@@ -36,11 +36,11 @@ interface Project {
 
 const projects: Project[] = [
   {
-    name: "Portfolio Website",
-    description: "Personal portfolio built with Nuxt 3 and PrimeVue",
-    icon: "pi pi-code",
-    url: "https://github.com/KledEatsTacos/kledeatstacos-com"
-  },
+    name: "MedAI",
+    description: "AI-powered chatbot for medical students using Gemini, focused on medicine and healthcare education",
+    icon: "pi pi-heart",
+    url: "https://medaiapp-livid.vercel.app/"
+  },  
   {
     name: "Word Spaghetti",
     description: "Interactive word game where you type to create floating letters that connect to form words",

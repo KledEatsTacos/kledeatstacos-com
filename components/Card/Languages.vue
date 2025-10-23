@@ -79,15 +79,5 @@ const languages: Language[] = [
   }
 }
 
-.progress-arabic :deep(.p-progressbar-value) {
-  background: #45a29e;
-}
 
-.progress-english :deep(.p-progressbar-value) {
-  background: #5e60ce;
-}
-
-.progress-turkish :deep(.p-progressbar-value) {
-  background: #e63946;
-}
 </style>
