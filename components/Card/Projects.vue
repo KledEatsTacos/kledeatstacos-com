@@ -41,7 +41,7 @@ const projects: Project[] = [
     icon: "pi pi-heart",
     url: "https://medaiapp-livid.vercel.app/"
   },  
-  {
+  { //SOMEBODY TOUCHA MAH SPAGHETT
     name: "Word Spaghetti",
     description: "Interactive word game where you type to create floating letters that connect to form words",
     icon: "pi pi-pencil",
