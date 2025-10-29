@@ -32,7 +32,7 @@
           v-for="({ ariaLabel, icon, onClick }, index) in socialMediaButtons"
           :key="index"
           :icon
-          :aria-label
+          :ariaLabel
           @click="onClick"
           text
         />
@@ -53,13 +53,10 @@ const { theme } = toRefs(store);
 
 const copyrightText = computed(() => `${dayjs().year()} © Made with`);
 
-const currentTheme = ref(themes.dark);
-
 const toggleTheme = () => {
   const newTheme =
-    currentTheme.value === themes.dark ? themes.light : themes.dark;
+    store.theme === themes.dark ? themes.light : themes.dark;
 
-  currentTheme.value = newTheme;
   store.theme = newTheme;
 
   let themeLink = document.getElementById("theme-link");
