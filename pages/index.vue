@@ -34,6 +34,7 @@ onNuxtReady(async () => {
         displayText: string; 
         track: string | null; 
         artist: string | null;
+        isPlaying: boolean;
       };
       
       store.currentlyPlaying = trackInfo.displayText;      
@@ -41,14 +42,20 @@ onNuxtReady(async () => {
         track: trackInfo.track,
         artist: trackInfo.artist
       };
+      store.isPlaying = trackInfo.isPlaying;
     }
   };
 
   await updateMusicInfo();
 
-  setInterval(async () => {
+  const intervalId = setInterval(async () => {
     await updateMusicInfo();
   }, ONE_MINUTE);
+
+  // Clean up interval when component unmounts
+  onUnmounted(() => {
+    clearInterval(intervalId);
+  });
 });
 </script>
 

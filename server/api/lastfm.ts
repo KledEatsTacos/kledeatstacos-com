@@ -21,18 +21,33 @@ const getRecentTrack = async () => {
   
   if (!tracks?.length) {
     return { 
-      displayText: "No track is currently playing.",
+      displayText: "Not listening to anything right now",
       track: null,
-      artist: null
+      artist: null,
+      isPlaying: false
     };
   }
 
   const track = tracks[0];
+  
+  // Check if actively playing NOW (not just last played)
+  const isPlaying = track['@attr']?.nowplaying === 'true';
+  
+  if (!isPlaying) {
+    return {
+      displayText: "Not listening to anything right now",
+      track: null,
+      artist: null,
+      isPlaying: false
+    };
+  }
+  
   return {
     displayText: `${track.artist['#text']} - ${track.name}`,
     track: track.name,
     artist: track.artist['#text'],
-    image: track.image?.find(img => img.size === 'large')?.['#text'] || null
+    image: track.image?.find((img: any) => img.size === 'large')?.['#text'] || null,
+    isPlaying: true
   };
 };
 
@@ -42,9 +57,10 @@ export default defineEventHandler(async () => {
   } catch (error) {
     console.error('Error in Last.fm event handler:', error);
     return { 
-      displayText: "No track is currently playing.",
+      displayText: "Not listening to anything right now",
       track: null,
-      artist: null
+      artist: null,
+      isPlaying: false
     };
   }
 });

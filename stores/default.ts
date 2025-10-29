@@ -11,7 +11,8 @@ export const useDefaultStore = defineStore({
     currentTrackInfo: {
       track: null as string | null,
       artist: null as string | null
-    }
+    },
+    isPlaying: false
   }),
   actions: {},
 });

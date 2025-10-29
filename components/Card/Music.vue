@@ -4,13 +4,13 @@
 
     <template #content>
       <div class="card-content">
-        <div class="equalizer"><span /><span /><span /></div>
+        <div v-if="isPlaying" class="equalizer"><span /><span /><span /></div>
 
         <Skeleton v-if="!currentlyPlaying"></Skeleton>
 
         <span>{{ currentlyPlaying }}</span>
         
-        <div class="click-indicator">
+        <div v-if="isPlaying" class="click-indicator">
           <span class="click-text">Click to listen</span>
         </div>
       </div>
@@ -19,13 +19,9 @@
 </template>
 
 <script lang="ts" setup>
-const {
-  profiles: { lastfm },
-} = useAppConfig();
-
 const YOUTUBE_API = "/api/youtube";
 const store = useDefaultStore();
-const { currentlyPlaying, currentTrackYoutubeUrl, currentTrackInfo } = toRefs(store);
+const { currentlyPlaying, currentTrackYoutubeUrl, currentTrackInfo, isPlaying } = toRefs(store);
 
 const openYoutubeVideo = async () => {
   // If we already have a YouTube URL, use it
@@ -54,7 +50,7 @@ const openYoutubeVideo = async () => {
   }
   
   // Fallback: If we have no YouTube URL, just search YouTube for the current track
-  if (currentlyPlaying.value && currentlyPlaying.value !== "No track is currently playing.") {
+  if (currentlyPlaying.value && isPlaying.value) {
     const searchQuery = encodeURIComponent(currentlyPlaying.value);
     window.open(`https://www.youtube.com/results?search_query=${searchQuery}`, '_blank');
   }
