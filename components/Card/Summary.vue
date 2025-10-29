@@ -34,7 +34,7 @@ const {
 } = useAppConfig();
 
 const aboutMeWriting = ref(
-  "Looks like you stumbled upon my website! Here's a brief glimpse of who I am: I'm a computer engineering student at Sakarya University, constantly trying to learn and improve myself."
+  "Looks like you stumbled upon my website! Here's a brief glimpse of who I am: I'm a third year computer engineering student at Sakarya University, constantly trying to learn and improve myself. I am currently learning different fields including web development and AI. Feel free to connect with me on LinkedIn or check out my projects on GitHub!"
 );
 
 const socialMediaButtons = [
