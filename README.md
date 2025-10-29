@@ -75,8 +75,6 @@ This project uses environment variables to manage API keys and other sensitive o
     *   `NUXT_APP_TITLE`: Your desired website title.
     *   `LINKEDIN_PROFILE`: Your LinkedIn profile URL.
     *   `GITHUB_PROFILE`: Your GitHub profile URL.
-    *   `STEAM_PROFILE`: Your Steam profile URL.
-    *   `YOUTUBE_PROFILE`: Your YouTube channel URL.
     *   `NUXT_APP_DARK_THEME`, `NUXT_APP_LIGHT_THEME`: URLs for PrimeVue themes (defaults are provided).
     *   `LASTFM_API_KEY`: Your Last.fm API key.
     *   `LASTFM_USERNAME`: Your Last.fm username.
