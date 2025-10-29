@@ -6,9 +6,9 @@ export const EDUCATIONS = [
     range: "2023 - 2027",
   },
   {
-    name: "Language preperation",
+    name: "Sakarya University",
     degree: "C1 Turkish",
-    studyField: "Turkish Language",
+    studyField: "Turkish Language preparation",
     range: "2022 - 2023",
   }
 ];
