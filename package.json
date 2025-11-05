@@ -17,6 +17,7 @@
     "@vercel/speed-insights": "^1.0.9",
     "better-sqlite3": "^12.2.0",
     "nuxt": "^3.19.0",
+    "nuxt-gtag": "^4.1.0",
     "pinia": "^2.2.4",
     "primeicons": "^7.0.0",
     "primevue": "^3.53.0",

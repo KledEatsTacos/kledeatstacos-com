@@ -69,7 +69,12 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "dayjs-nuxt",
     "@nuxt/image",
+    "nuxt-gtag",
   ],
+
+  gtag: {
+    id: 'G-YN3N2Z1M59',
+  },
 
   css: ["primeicons/primeicons.css"],
 
@@ -114,6 +119,7 @@ export default defineNuxtConfig({
           src: "https://kit.fontawesome.com/f1354c0521.js",
           crossorigin: "anonymous",
         },
+        
       ],
     },
   },
